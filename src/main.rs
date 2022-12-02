@@ -30,6 +30,15 @@ fn run(day_number: usize) -> Result<()> {
             .with_context(|| "Failed to run day 1.")?;
             println!("Max calories: {}", result);
         }
+        2 => {
+            let input_file = Path::new("assets/day_2/input.txt");
+            day_2::Day2 {
+                file_reader,
+                file_path: input_file,
+            }
+            .run()
+            .with_context(|| "Failed to run day 2.")?;
+        }
         _ => {
             return Err(Error::msg(format!(
                 "Day {} is not implemented yet",

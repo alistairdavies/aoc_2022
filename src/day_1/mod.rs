@@ -8,6 +8,15 @@ pub struct Day1 {
     pub file_path: &'static Path,
 }
 
+impl Default for Day1 {
+    fn default() -> Self {
+        Self {
+            file_reader: Box::new(super::files::FileSystemReader{}),
+            file_path: Path::new("assets/day_1/input.txt"),
+        }
+    }
+}
+
 impl Day<usize> for Day1 {
     fn run(&self) -> Result<usize> {
         let input = self.file_reader.read_file(self.file_path)?;

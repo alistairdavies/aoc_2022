@@ -8,6 +8,15 @@ pub struct Day2 {
     pub file_path: &'static Path,
 }
 
+impl Default for Day2 {
+    fn default() -> Self {
+        Self {
+            file_reader: Box::new(super::files::FileSystemReader{}),
+            file_path: Path::new("assets/day_2/input.txt"),
+        }
+    }
+}
+
 enum Signals {
     Rock = 1,
     Paper = 2,

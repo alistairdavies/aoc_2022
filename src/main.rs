@@ -39,6 +39,15 @@ fn run(day_number: usize) -> Result<()> {
             .run()
             .with_context(|| "Failed to run day 2.")?;
         }
+        3 => {
+            let input_file = Path::new("assets/day_3/input.txt");
+            day_3::Day3 {
+                file_reader,
+                file_path: input_file,
+            }
+            .run()
+            .with_context(|| "Failed to run day 3.")?;
+        }
         _ => {
             return Err(Error::msg(format!(
                 "Day {} is not implemented yet",

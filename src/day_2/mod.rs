@@ -11,7 +11,7 @@ pub struct Day2 {
 impl Default for Day2 {
     fn default() -> Self {
         Self {
-            file_reader: Box::new(super::files::FileSystemReader{}),
+            file_reader: Box::new(super::files::FileSystemReader {}),
             file_path: Path::new("assets/day_2/input.txt"),
         }
     }

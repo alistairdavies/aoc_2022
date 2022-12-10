@@ -44,6 +44,11 @@ fn run(day_number: usize) -> Result<()> {
                 .run()
                 .with_context(|| "Failed to run day 5.")?;
         }
+        6 => {
+            day_6::Day6::default()
+                .run()
+                .with_context(|| "Failed to run day 6.")?;
+        }
         _ => {
             return Err(Error::msg(format!(
                 "Day {} is not implemented yet",
